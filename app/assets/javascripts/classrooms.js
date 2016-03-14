@@ -1,12 +1,12 @@
 console.log("Teste");
 var classroomCenter = angular.module('ClassroomCenter', ['ngResource']);
 
-classroomCenter.factory("Classroom", function($resource) {
+classroomCenter.factory("Classroom", ["$resource", function($resource) {
     return $resource("classrooms/:id", { id: '@id' }, {
         index:  { method: 'GET', isArray: true, responseType: 'json' },
         update: { method: 'PUT', responseType: 'json' }
     });
-});
+}]);
 
 classroomCenter.controller("classroomsController", function($scope, Classroom) {
     $scope.classrooms = Classroom.index()
