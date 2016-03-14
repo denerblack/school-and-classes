@@ -52,21 +52,10 @@ gem "therubyracer"
 gem 'bootstrap-sass', '~> 3.2.0.2'
 
 gem "less-rails"
-#group :assets do
-  gem 'twitter-bootstrap-rails'
-#end
+gem 'twitter-bootstrap-rails'
 
 gem 'responders', '~> 2.0'
 
 gem 'angularjs-rails'
 
-#source 'https://rails-assets.org'
-#gem 'rails-assets-normalize-scss', '~> 3.0.1'
-#gem 'rails-assets-stylish-scss', '~> 0.0.5'
-#gem 'rails-assets-angular', '1.2.14'
-#gem 'rails-assets-angular-resource', '1.2.14'
-#gem 'rails-assets-angular-sanitize', '1.2.14'
-#gem 'rails-assets-angular-animate', '1.2.14'
-#gem 'rails-assets-angular-i18n', '1.2.14'
-#gem 'rails-assets-restangular', '~> 1.3.1'
-#gem 'rails-assets-lodash', '~> 2.4.1'
+gem 'devise'

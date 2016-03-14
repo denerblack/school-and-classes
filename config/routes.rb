@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :classrooms, only: [:index, :create, :destroy], defaults: {format: :json}
   root "classrooms#index"
 
