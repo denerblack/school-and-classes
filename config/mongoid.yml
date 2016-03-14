@@ -43,9 +43,11 @@ test:
 production:
   clients:
     default:
-      database: school_and_classes_production
-      hosts:
-        - localhost:27017
+      #database: school_and_classes_production
+      #      database:
+      #hosts:
+      #  - localhost:27017
+      uri: mongodb://heroku_gcxtm34g:cs950st7kudujgodl3d31u04ru@ds011369.mlab.com:11369/heroku_gcxtm34g
       options:
         read:
           mode: primary
