@@ -8,7 +8,7 @@ classroomCenter.factory("Classroom", ["$resource", function($resource) {
     });
 }]);
 
-classroomCenter.controller("classroomsController", function($scope, Classroom) {
+classroomCenter.controller("classroomsController", ["$scope", "Classroom", function($scope, Classroom) {
     $scope.classrooms = Classroom.index()
         $scope.students = []
         for (var i in students) {
@@ -32,4 +32,4 @@ classroomCenter.controller("classroomsController", function($scope, Classroom) {
             Classroom.delete(classroom)
             $scope.classrooms.splice(index, 1);
     }
-});
+}]);
