@@ -1,0 +1,62 @@
+<div class="container" ng-app="ClassroomCenter" data-no-turbolink="true">
+  <h1><%#= page_title %></h1>
+
+  <div ng-controller="classroomsController">
+    <div class="well">
+      <h3>Create Registration</h3>
+      <!--form ng-submit="addClassroom()-->
+      <form ng-submit="addClassroom()">
+        <div class="row">
+          <div class="col-xs-6">
+            <select id="selectCourse" ng-model="newClassroom.classroom.course"
+                    ng-options="course as course.name for course in courses"
+                    class="form-control">
+              <option value=""><%= t('labels.classrooms.select_a_course')%></option>
+            </select>
+          </div>
+          <div class="col-xs-6">
+            <select id="selectStudent" ng-model="newClassroom.classroom.student"
+                    ng-options="student as student.name for student in students track by student.id"
+                    class="form-control">
+              <option value=""><%= t('labels.classrooms.select_a_student') %></option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <br/>
+          <div class="col-xs-12 text-center">
+            <br/>
+            <input type="submit" value="Add Classroom" class="btn btn-primary" />
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Course Name</th>
+          <th>Student Name</th>
+          <th>&nbsp;</th>
+        </tr>
+              </thead>
+      <tbody>
+        <tr ng-show="!classrooms.length">
+          <td colspan="4">No classrooms.</td>
+        </tr>
+        <tr ng-repeat="classroom in classrooms">
+          <td>{{ classroom.course.name }}</td>
+          <td>{{ classroom.student.name }}</td>
+          <td><a class="btn btn-danger" ng-click="deleteClassroom($index)">Remove</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script type="text/javascript" charset="utf-8">
+      var students  = <%= @students.to_json.html_safe %>;
+      var courses   = <%= @courses.to_json.html_safe %>;
+    </script>
+
+  </div>
+</div>
