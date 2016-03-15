@@ -1,5 +1,5 @@
 console.log("Teste");
-var classroomCenter = angular.module('ClassroomCenter', ['ngResource']);
+var classroomCenter = angular.module('ClassroomCenter', ['ngResource', 'Devise']);
 
 classroomCenter.factory("Classroom", ["$resource", function($resource) {
     return $resource("classrooms/:id", { id: '@id' }, {
@@ -8,7 +8,7 @@ classroomCenter.factory("Classroom", ["$resource", function($resource) {
     });
 }]);
 
-classroomCenter.controller("classroomsController", ["$scope", "Classroom", function($scope, Classroom) {
+classroomCenter.controller("classroomsController", ["$scope", "Classroom", "Auth", function($scope, Classroom, Auth) {
     $scope.classrooms = Classroom.index()
         $scope.students = []
         for (var i in students) {

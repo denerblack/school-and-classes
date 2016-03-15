@@ -58,4 +58,10 @@ gem 'responders', '~> 2.0'
 
 gem 'angularjs-rails'
 
+source "https://rails-assets.org" do
+    gem "rails-assets-angular-devise"
+end
+
 gem 'devise'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'angular_rails_csrf'
