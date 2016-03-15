@@ -4,8 +4,8 @@
   <div ng-controller="classroomsController">
     <div class="well">
       <h3>Create Registration</h3>
-      <!--form ng-submit="addClassroom()-->
       <form ng-submit="addClassroom()">
+        <%#= form_tag "#", { method: :post, role: "form", "ng-submit" => "addClassroom()", "class" =>"ng-pristine ng-valid" } do %>
         <div class="row">
           <div class="col-xs-6">
             <select id="selectCourse" ng-model="newClassroom.classroom.course"
@@ -29,7 +29,8 @@
             <input type="submit" value="Add Classroom" class="btn btn-primary" />
           </div>
         </div>
-      </form>
+        </form>
+        <%# end %>
     </div>
 
 

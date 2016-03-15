@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   resources :courses
   resources :students
+  devise_scope :user do
+    post 'login' => 'sessions#create', :as => 'login'
+    post 'logout' => 'sessions#destroy', :as => 'logout'
+    get 'current_user' => 'sessions#show_current_user', :as => 'current_user'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

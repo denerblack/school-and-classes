@@ -59,3 +59,5 @@ gem 'responders', '~> 2.0'
 gem 'angularjs-rails'
 
 gem 'devise'
+gem 'rack-cors', :require => 'rack/cors'
+
