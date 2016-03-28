@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  layout :layout_by_resource
   before_filter :authenticate_user!
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -12,6 +13,15 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+
+  def layout_by_resource
+    if devise_controller?
+      "login"
+    else
+      "application"
+    end
+
+  end
 
   def verified_request?
     super || form_authenticity_token == request.headers['X-XSRF-TOKEN']
