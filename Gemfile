@@ -64,10 +64,11 @@ source "https://rails-assets.org" do
     gem 'rails-bootstrap-helpers'
     gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
                                     :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
-    gem "font-awesome-rails"
     gem 'rails-assets-jquery', '2.1.0'
     gem 'rails-assets-jquery-ui', '1.10.4'
 end
+
+gem "font-awesome-rails"
 
 gem 'devoops-rails'
 
