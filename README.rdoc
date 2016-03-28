@@ -1,4 +1,5 @@
 == README
+A simple application using Ruby On Rails, Devise, MongoDB and Angularjs
 
 Demo: https://rocky-journey-23785.herokuapp.com/
 User: admin@test.com
