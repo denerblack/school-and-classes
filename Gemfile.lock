@@ -254,9 +254,9 @@ DEPENDENCIES
   rails (= 4.2.5)
   rails-assets-angular-devise!
   rails-assets-bootstrap (= 3.1.0)!
-  rails-assets-jquery (= 2.1.0)
-  rails-assets-jquery-ui (= 1.10.4)
-  rails-bootstrap-helpers!
+  rails-assets-jquery (= 2.1.0)!
+  rails-assets-jquery-ui (= 1.10.4)!
+  rails-bootstrap-helpers
   responders (~> 2.0)
   rspec-rails
   sass-rails (~> 5.0)
